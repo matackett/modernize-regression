@@ -4,7 +4,7 @@
 
 [Click here](https://sta210-fa21.netlify.app/schedule/) for a full course schedule from Fall 2021.
 
-## Link to some STA 210 website for sample assignments and materials
+## Sample assignments & activities
 
 -   Add instructions for lego inclass activity & the NC states assignment.
 
