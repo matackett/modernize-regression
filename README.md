@@ -4,11 +4,13 @@
 
 As data has become more prevalent in academia, industry, and daily life, it is imperative that undergraduate students are equipped with the skills needed to analyze data in the modern environment. In recent years there has been a lot of work innovating introductory statistics courses and the developing introductory data science courses; however, there has been less work beyond the first course. This paper describes innovations to Regression Analysis taught at Duke University, a course focused on application that serves a diverse undergraduate student population of statistics majors and non-majors. Three principles guiding the modernization of the course are presented, along with how these principles align with the necessary skills of statistical practice outlined in recent statistics curriculum guidelines. The paper includes pedagogical strategies, motivated by the innovations in introductory courses, that make it feasible to implement skills for modern statistical practice into the curriculum alongside the fundamental statistical concepts. The paper concludes with the impact of these changes, challenges, and next steps for the course. Portions of in-class activities and assignments are included in the paper, with full sample assignments and resources for finding data in the supplemental materials.
 
-## Course websites
+## STA 210: Regression Analysis course websites
 
 💻 [Fall 2021](https://sta210-fa21.netlify.app)
 
 💻 [Fall 2022](https://sta210-fa22.netlify.app)
+
+-   The materials for this semester utilize the **tidymodels** framework and are based on the [Spring 2022](https://sta210-s22.github.io/website/) iteration of STA 210 taught by Dr. Mine Çetinkaya-Rundel.
 
 ## Sample activities & assignments
 
@@ -26,9 +28,9 @@ As data has become more prevalent in academia, industry, and daily life, it is i
 
 ✅ [Project report rubric](project-report-rubric.csv)
 
-## Additional data sets
+## Resources for data 
 
-Resources I've used to find data
+Resources used to find data for the course:
 
 -   [TidyTuesday](https://github.com/rfordatascience/tidytuesday)
 -   [OpenIntro](https://www.openintro.org/data/)
