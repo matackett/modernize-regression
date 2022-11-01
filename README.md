@@ -1,18 +1,30 @@
 ## Supplemental materials for the article "Three principles for modernizing an undergraduate regression analysis course"
 
-## Course schedule
+## Abstract 
 
-[Click here](https://sta210-fa21.netlify.app/schedule/) for a full course schedule from Fall 2021.
+As data has become more prevalent in academia, industry, and daily life, it is imperative that undergraduate students are equipped with the skills needed to analyze data in the modern environment. In recent years there has been a lot of work innovating introductory statistics courses and the developing introductory data science courses; however, there has been less work beyond the first course. This paper describes innovations to Regression Analysis taught at Duke University, a course focused on application that serves a diverse undergraduate student population of statistics majors and non-majors. Three principles guiding the modernization of the course are presented, along with how these principles align with the necessary skills of statistical practice outlined in recent statistics curriculum guidelines. The paper includes pedagogical strategies, motivated by the innovations in introductory courses, that make it feasible to implement skills for modern statistical practice into the curriculum alongside the fundamental statistical concepts. The paper concludes with the impact of these changes, challenges, and next steps for the course. Portions of in-class activities and assignments are included in the paper, with full sample assignments and resources for finding data in the supplemental materials.
 
-## Sample assignments & activities
+## Course websites
 
--   Add instructions for lego inclass activity & the NC states assignment.
+💻 [Fall 2021](https://sta210-fa21.netlify.app)
 
--   Link to NC assignment: <https://sta210-fa21.netlify.app/hw/hw-01.html>
+💻 [Fall 2022](https://sta210-fa22.netlify.app)
 
--   Example of assignment practicing writing and formatting: <https://sta210-sp21.netlify.app/hw/hw-01.html>
+## Sample activities & assignments
 
--   Assignment with questions + writing paragraph: <https://sta210-sp21.netlify.app/hw/hw-04.html>
+📝 [LEGOs in-class activity](lego-activity)
+
+📝 [NC elections assignment](slr-nc-elections)
+
+## Project + teamwork
+
+🤝 [Team agreement](team-agreement)
+
+💻 [Project instructions (Fall 2021)](https://sta210-fa21.netlify.app/project/)
+
+✅ [Project peer review](https://github.com/matackett/peer-feedback)
+
+✅ [Project report rubric](project-report-rubric.csv)
 
 ## Additional data sets
 
@@ -24,3 +36,5 @@ Resources I've used to find data
 -   [FiveThirtyEight](https://data.fivethirtyeight.com/)
 
 These resources have been useful, because they have typically have good documentation on the original source of the data and the variable definitions. In the case of the OpenIntro resources, these data sets have been curated specifically to use for regression exercises. Some resources such as FiveThirtyEight data sets from TidyTuesday, have accompanying articles, so class activities and assignments can include a comparison of the students' analysis approach and conclusions to those of the original authors'.
+
+## Acknowledgements

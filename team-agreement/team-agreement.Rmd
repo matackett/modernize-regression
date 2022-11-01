@@ -1,0 +1,51 @@
+---
+title: "Team Agreement"
+author: "Team Name: Team member 1, Team member 2, Team member 3, Team member 4"
+date: "`r Sys.Date()`"
+output: pdf_document
+---
+
+## Rationale
+
+Teams work better when members have a common understanding of the team's goals and expectations for collaboration. The purpose of this activity is to help your team making a plan for working together during lab and outside of the scheduled lab time.
+
+Each team member will have some ideas about how a team should operate. These ideas may be very different. This is your opportunity to share your thoughts and ideas to
+promote optimal team function and prevent misunderstandings in the future. 
+
+## Instructions 
+
+Discuss each of the items below as a team. Have one person act as the recorder and type the team's decisions in this document. *Be sure the team agrees on an item before it is added to the document.*
+
+Once the document is complete, the recorder should knit, commit, and push the team agreement to GitHub. All team members can refer to this document throughout the semester. *This document does not need to be submitted on Gradescope.*
+
+## Team expectations 
+
+### Weekly meetings
+
+*Identify a 1 - 2 hour weekly block outside of lab where the team can meet to work on assignments. All team members should block off this time on their calendar in case the group needs to meet to finish lab or work on the project.* 
+
+
+
+### Meeting "location"
+
+*How the team will meet to work together (e.g. in-person, Zoom, Facetime, Google Hangouts). Be sure every member is able to access the virtual meeting space, if needed.*
+
+
+
+### If you are unable to find a weekly time when the team can meet, briefly outline a plan to work on assignments outside of lab. Otherwise, you can delete this item.
+
+
+
+### Primary method of communication
+
+*The team's primary method of communication outside of meetings (e.g. GroupMe, Slack, Piazza group, text messages, etc.)*
+
+### How should someone notify the other members if they are unable to attend lab or a schedueld team meeting?
+
+
+### By when should everyone have their portion of the lab completed?
+
+*Keep in mind your team may want to have time to review the lab before turning it in to make sure it is a cohesive write up.* 
+
+
+### Any other items the team would like to discuss or plan. 
