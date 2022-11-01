@@ -40,3 +40,5 @@ Resources used to find data for the course:
 These resources have been useful, because they have typically have good documentation on the original source of the data and the variable definitions. In the case of the OpenIntro resources, these data sets have been curated specifically to use for regression exercises. Some resources such as FiveThirtyEight data sets from TidyTuesday, have accompanying articles, so class activities and assignments can include a comparison of the students' analysis approach and conclusions to those of the original authors'.
 
 ## Acknowledgements
+
+The pedagogy and computing infrastructure used in STA 210: Regression Analysis are largely inspired by the introductory data science curriculum [Data Science in a Box](https://datasciencebox.org) by Dr. Mine Çetinkaya-Rundel.
