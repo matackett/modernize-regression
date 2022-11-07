@@ -1,0 +1,157 @@
+---
+title: "Simple linear regression"
+subtitle: "2020 U.S. Election"
+output:
+  html_document: 
+    css: "hw.css"
+    highlight: pygments
+    fig_height: 4
+    fig_width: 6
+    toc: true
+    toc_float: true
+    toc_depth: 3
+link-citations: yes
+---
+
+# Introduction
+
+In this assignment, you'll use simple linear regression to explore the percent of votes cast in-person in the 2020 United States (U.S.) election based on the county's political leanings.
+
+## Learning goals
+
+In this assignment, you will...
+
+-   Fit and interpret simple linear regression models
+-   Assess the conditions for simple linear regression.
+-   Create and interpret spatial data visualizations using R.
+-   Continue developing a workflow for reproducible data analysis.
+
+# Packages
+
+The following packages will be used in this assignment:
+
+```{r eval = FALSE}
+library(tidyverse)
+library(knitr)
+library(ggfortify)
+library(broom)
+library(viridis)
+```
+
+# Data
+
+There are multiple data sets for this assignment. Use the code below to load the data.
+
+```{r eval = FALSE}
+election_nc <- read_csv("data/nc-election-2020.csv") %>%
+  mutate(fips = as.integer(FIPS))
+county_map_data <-  read_csv("data/nc-county-map-data.csv")
+election_sample <- read_csv("data/us-election-2020-sample.csv")
+```
+
+The county-level election data in `election_nc` and `election_sample` are from [The Economist GitHub repo](https://github.com/TheEconomist/in-person-voting-covid-19). The data were originally analyzed in the July 2021 article [In-person voting really did accelerate covid-19's spread in America](https://www-economist-com.proxy.lib.duke.edu/graphic-detail/2021/07/10/in-person-voting-really-did-accelerate-covid-19s-spread-in-america). This analysis will focus on the following variables:
+
+-   `inperson_pct`: The proportion of a county's votes cast in-person in the 2020 election
+-   `pctTrump_2016`: The proportion of a county's votes cast for Donald Trump in the 2016 election
+
+The data in `county_map_data` were obtained from the **maps** package in R. We will not analyze any of the variables in this data set but will use it to help create maps in the assignment. [Click here](https://cran.r-project.org/web/packages/maps/maps.pdf) to see the documentation for the maps package. [Click here](https://eriqande.github.io/rep-res-web/lectures/making-maps-with-R.html) for code examples.
+
+# Exercises
+
+Due to COVID-19 pandemic, many states made alternatives to in-person voting, such as voting by mail, more widely available for the 2020 U.S. election. The general consensus at the time was that voters who were more Democratic leaning would be more likely to vote by mail, while more Republican leaning voters would largely vote in-person. This was supported by multiple surveys, including [this survey](https://www.pewresearch.org/fact-tank/2020/09/08/americans-expectations-about-voting-in-2020-presidential-election-are-colored-by-partisan-differences/) conducted by Pew Research.
+
+The goal of this analysis is to use regression analysis to explore the relationship between a county's political leanings and the proportion of votes cast in-person in 2020. **Did counties with more Republican leanings have a larger proportion of votes cast in person in the 2020 election?**
+
+We will use the proportion of votes cast for Donald Trump in 2016 (`pctTrump_2016`) as a measure of a county's political leaning. Counties with a higher proportion of votes for Trump in 2016 are considered to be more Republican leaning.
+
+## Part 1: Counties in North Carolina
+
+For this part of the analysis, we will focus on counties in North Carolina. We will use the data sets `election_nc` and `county_map_data`.
+
+### Exercise 1
+
+Visualize the distribution of the response variable `inperson_pct` and calculate appropriate summary statistics. Use the visualization and summary statistics to describe the distribution. Include an informative title and axis labels on the plot.
+
+### Exercise 2
+
+Let's view the data in another way. Use the code below to make a map of North Carolina with the color of each county filled in based on the percentage of votes cast in-person in the 2020 election. Fill in title and axis labels.
+
+Then use the plot answer the following:
+
+-   What are 2 - 3 observations you have from the plot?
+-   What is a feature that is apparent in the map that wasn't apparent from the visualization in the previous exercise? What is a feature that is apparent in the visualization in the previous exercise that is not apparent in the map?
+
+```{r eval = FALSE}
+election_map_data <- left_join(election_nc, county_map_data)
+```
+
+```{r eval = FALSE}
+ggplot() + 
+  geom_polygon(county_map_data, mapping = aes(x = long, y = lat, group = group), 
+               fill = "lightgray", color = "white") + 
+  geom_polygon(election_map_data, mapping = aes(x = long, y = lat, group = group, 
+               fill = inperson_pct)) + 
+  labs(x = "_____", 
+       y = "_____", 
+       fill = "_____", 
+       title = "_____") +
+  scale_fill_viridis() 
+```
+
+### Exercise 3
+
+Create a visualization of the relationship between `inperson_pct` and `pctTrump_2016`. Use the visualization to describe the relationship between the two variables.
+
+### Exercise 4
+
+We can use a linear regression model to better quantify the relationship between the variables Fit the linear model to understand variability in the percent of in-person votes based on the percentage of votes for Trump in the 2016 election. Neatly display the model output with 3 digits.
+
+-   Write the regression equation using mathematical notation.
+
+### Exercise 5
+
+Now let's use the model coefficients to describe the relationship.
+
+-   Interpret the slope in the context of the data. Write the interpretation in a way that is meaningful in practice.
+-   Does it make sense to interpret the intercept? If so, write the interpretation in the context of the data. Otherwise, briefly explain why not.
+
+### Exercise 6
+
+Now let's evaluate the model conditions. Check the **linearity**, **constant variance**, and **normality** conditions. For each condition, indicate whether it is satisfied along with a brief explanation for your conclusion. Include the any plots and/or summary statistics used to support your response.
+
+### Exercise 7
+
+The last condition we need to check is **independence**. To do so, we will examine a map of the counties in North Carolina with the color filled based on the value of the residuals.
+
+-   Briefly explain why we may want to view the residuals on a map to assess independence.
+-   Briefly explain what pattern (if any) we would expect to observe on the map if the independence condition is satisfied.
+
+### Exercise 8
+
+Fill in the name of your model in the code below to calculate the residuals and add them to `election_map_data`. Then, a map with the color of each county filled in based on the value of the residual. *Hint: Start with the code from Exercise 2.*
+
+-   Is the independence condition satisfied? Briefly explain based on what you observe from the plot.\
+
+```{r eval = FALSE}
+election_resid <- election_nc %>%
+  mutate(residual = resid(_____)) %>% 
+  select(fips, residual)
+
+election_map_data <- left_join(election_map_data, election_resid)
+```
+
+## Part 2: Inference for U.S.
+
+To get a better understanding of the trend across the entire United States, we analyze data from a random sample of 200 counties. This data is in the `election_sample` data frame. Because these counties were randomly selected out of the 3,006 counties in the United States, we will treat the counties as independent observations.
+
+### Exercise 9
+
+Fit the linear model to understand variability in the percent of in-person votes based on the percentage of votes for Trump in the 2016 election. Neatly display the model output,with 3 digits. Include the 92% confidence interval for the coefficients in the output.
+
+-   Then, conduct the hypothesis test for the slope. In your response, state the null and alternative hypotheses in words, and state the conclusion in the context of the data.
+
+### Exercise 10
+
+Interpret the confidence interval in the context of the data. The interpretation should be written in a way that is meaningful in practice.
+
+-   Do the hypothesis test and confidence interval support the general consensus that Republican voters were more likely to vote in-person in the 2020 election? Briefly explain why or why not.

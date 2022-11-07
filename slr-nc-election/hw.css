@@ -1,0 +1,116 @@
+/* * Customizing tufte.css * */
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Pro:300,400,600,700';
+@import 'https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap';
+@charset "UTF-8";
+
+/* Tufte CSS styles */
+
+html {
+	font-size: 18px;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	background-color: #fefefe;
+	color: #222;
+	counter-reset: li;
+	font-size: 18px;
+}
+
+p {
+  font-sizez: 18px;
+}
+
+h1.title {
+	font-weight: 700;
+	font-family: 'Open Sans', sans-serif;
+	color: #008eaa;
+}
+
+h1 {
+	font-style: normal;
+	font-family: 'Open Sans', sans-serif;
+	color: #008eaa;
+}
+
+h2 {
+	font-style: normal;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	color: #008eaa;
+}
+
+h3 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	color: #008eaa;
+}
+
+a, a > code {
+  font-family: 'Source Code Pro', sans-serif;
+  color: blue;
+  text-decoration: underline;
+  font-size: 100%;
+}
+
+
+em {
+	font-style: italic;
+	font-weight: 350;
+	font-family: "Open Sans";
+}
+
+strong {
+	font-style: bold;
+	font-weight: 600;
+	font-family: "Open Sans";
+}
+
+
+/* Code formatting */
+
+@media screen and (max-width: 760px) {
+	pre {
+		width: 100%;
+		font-size: 18px;
+     	overflow-x: auto;
+	}
+}
+
+.remark-code, .remark-inline-code { 
+font-family: 'Source Code Pro'; 
+}
+
+
+.remark-inline-code {
+  font-weight: bold;
+  font-size: 100%;
+}
+.remark-code-line-highlighted     { background-color: #ffff88; }
+
+
+pre {
+	background-color: #FFFFFF;
+	border-width: 0px;
+  border-radius: 4px;*/
+  overflow-x: auto;
+ 	padding: 1em;
+ 	white-space: inherit;
+ 	word-break: normal;
+ 	word-wrap: normal;
+}
+
+
+pre.r {
+	background-color: #F5F5F5;	
+	/*border-color: #CCCCCC*/
+	 white-space: inherit;
+	 font-size: 18px;
+	
+}
+
+
+
+
