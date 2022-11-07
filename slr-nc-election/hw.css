@@ -15,7 +15,6 @@ body {
 	font-weight: 400;
 	background-color: #fefefe;
 	color: #222;
-	counter-reset: li;
 	font-size: 18px;
 }
 
@@ -48,13 +47,19 @@ h3 {
 	color: #008eaa;
 }
 
-a, a > code {
-  font-family: 'Source Code Pro', sans-serif;
-  color: blue;
+a {
+  font-family: 'Open Sans', sans-serif;
+  color: purple;
   text-decoration: underline;
   font-size: 100%;
 }
 
+code {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 100%;
+}
+
+}
 
 em {
 	font-style: italic;
@@ -81,6 +86,8 @@ strong {
 
 .remark-code, .remark-inline-code { 
 font-family: 'Source Code Pro'; 
+font-size: 100%;
+color: orange;
 }
 
 
