@@ -20,6 +20,8 @@ As data has become more prevalent in academia, industry, and daily life, it is i
 
 ## Project + teamwork
 
+👩‍💻 ["Get to Know You" Survey](get-to-know-you-survey.pdf)
+
 🤝 [Team agreement](team-agreement)
 
 💻 [Project instructions (Fall 2021)](https://sta210-fa21.netlify.app/project/)
