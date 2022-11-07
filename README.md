@@ -14,7 +14,7 @@ As data has become more prevalent in academia, industry, and daily life, it is i
 
 ## Sample activities & assignments
 
-📝 [Simple Linear Regression: 2020 United States Election](slr-nc-elections)
+📝 [Simple Linear Regression: 2020 United States Election](slr-us-election)
 
 📝 [Multiple Linear Regression: LEGOs in-class activity](lego-activity)
 
